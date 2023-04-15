@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: luancss/kube-news:v1
+          image: luancss/kube-news:{{TAG}}
           ports:
           - containerPort: 8080
           env:
@@ -80,6 +80,5 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
-      nodePort: 30000
-  type: NodePort
+  type: LoadBalancer
           
